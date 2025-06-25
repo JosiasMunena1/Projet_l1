@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorez la collection AfroVibe Shop : vêtements et accessoires artisanaux inspirés par la culture africaine, conçus avec passion et authenticité.">
+    <title>AfroVibe Shop - Collection</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="conteneur">
+            <h1>AfroVibe Shop</h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="menu.html">Collection</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><span id="cart-count" class="compteur-panier">Panier : 0</span></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Modal Panier -->
+    <div id="cart-modal" class="modale">
+        <div class="contenu-modale">
+            <span class="fermer-modale">×</span>
+            <table class="tableau-panier">
+                <thead>
+                    <tr>
+                        <th>Article</th>
+                        <th>Quantité</th>
+                        <th>Prix unitaire</th>
+                        <th>Sous-total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="articles-panier"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td>Total</td>
+                        <td id="cart-total">0.00 €</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="validate-cart" class="bouton-cta" disabled>Valider la commande</button>
+        </div>
+    </div>
+
+    <!-- Modal Confirmation -->
+    <div id="confirmation-modal" class="modale-confirmation">
+        <div class="contenu-modale">
+            <span class="fermer-confirmation">×</span>
+            <h2>Confirmation</h2>
+            <p>Votre commande a été validée avec succès !</p>
+            <button class="bouton-cta">OK</button>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Introduction -->
+        <section class="section-introduction" style="--index: 0;">
+            <div class="conteneur">
+                <h2>Notre Collection Exquise</h2>
+                <p>Plongez dans l'univers d'AfroVibe Shop avec nos vêtements et accessoires artisanaux, inspirés par la richesse de la culture africaine. Chaque pièce est conçue avec soin pour célébrer l'héritage et la modernité.</p>
+                <a href="#menu-items" class="bouton-cta">Explorer la Collection</a>
+            </div>
+        </section>
+
+        <!-- Section Filtres -->
+        <section class="section-filtres" style="--index: 0;">
+            <div class="conteneur">
+                <h3>Filtrer les Articles</h3>
+                <div class="groupe-filtres">
+                    <button class="filtre-categorie bouton-cta" data-categorie="tous">Tous</button>
+                    <button class="filtre-categorie bouton-cta" data-categorie="vêtements">Vêtements</button>
+                    <button class="filtre-categorie bouton-cta" data-categorie="accessoires">Accessoires</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Articles -->
+        <section class="section-menu" id="menu-items" style="--index: 0;">
+            <div class="conteneur">
+                <h2>Nos Créations</h2>
+                <div class="grille-menu">
+                    <div class="élément-menu" data-id="1" data-categorie="vêtements" style="--index: 0;">
+                        <img src="../images/ankara-dress.jpg" alt="Robe Ankara">
+                        <h3>Robe Ankara</h3>
+                        <p><strong>Prix :</strong> 45.00 €</p>
+                        <p>Description : Une robe vibrante à imprimé Ankara, cousue à la main avec un tissu africain authentique.</p>
+                        <button class="ajouter-au-panier">Ajouter au panier</button>
+                        <span class="notification-panier">Ajouté !</span>
+                    </div>
+                    <div class="élément-menu" data-id="2" data-categorie="vêtements" style="--index: 1;">
+                        <img src="../images/kente-shirt.jpg" alt="Chemise Kente">
+                        <h3>Chemise Kente</h3>
+                        <p><strong>Prix :</strong> 35.00 €</p>
+                        <p>Description : Une chemise audacieuse à motif Kente, symbole de la royauté africaine.</p>
+                        <button class="ajouter-au-panier">Ajouter au panier</button>
+                        <span class="notification-panier">Ajouté !</span>
+                    </div>
+                    <div class="élément-menu" data-id="3" data-categorie="accessoires" style="--index: 2;">
+                        <img src="../images/beaded-necklace.jpg" alt="Collier de Perles">
+                        <h3>Collier de Perles</h3>
+                        <p><strong>Prix :</strong> 25.00 €</p>
+                        <p>Description : Un collier de perles de style Maasai fait à la main, un véritable bijou culturel.</p>
+                        <button class="ajouter-au-panier">Ajouter au panier</button>
+                        <span class="notification-panier">Ajouté !</span>
+                    </div>
+                    <div class="élément-menu" data-id="4" data-categorie="vêtements" style="--index: 3;">
+                        <img src="../images/dashiki-top.jpg" alt="Haut Dashiki">
+                        <h3>Haut Dashiki</h3>
+                        <p><strong>Prix :</strong> 40.00 €</p>
+                        <p>Description : Un haut Dashiki coloré, mêlant tradition et style moderne.</p>
+                        <button class="ajouter-au-panier">Ajouter au panier</button>
+                        <span class="notification-panier">Ajouté !</span>
+                    </div>
+                    <div class="élément-menu" data-id="5" data-categorie="vêtements" style="--index: 4;">
+                        <img src="../images/ankara-skirt.jpg" alt="Jupe Ankara">
+                        <h3>Jupe Ankara</h3>
+                        <p><strong>Prix :</strong> 30.00 €</p>
+                        <p>Description : Une jupe vibrante à imprimé Ankara, parfaite pour une touche africaine élégante.</p>
+                        <button class="ajouter-au-panier">Ajouter au panier</button>
+                        <span class="notification-panier">Ajouté !</span>
+                    </div>
+                    <div class="élément-menu" data-id="6" data-categorie="accessoires" style="--index: 5;">
+                        <img src="../images/wooden-bracelet.jpg" alt="Bracelet en Bois">
+                        <h3>Bracelet en Bois</h3>
+                        <p><strong>Prix :</strong> 15.00 €</p>
+                        <p>Description : Un bracelet en bois sculpté, reflétant l'artisanat africain traditionnel.</p>
+                        <button class="ajouter-au-panier">Ajouter au panier</button>
+                        <span class="notification-panier">Ajouté !</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Recommandations -->
+        <section class="section-recommandations" style="--index: 0;">
+            <div class="conteneur">
+                <h2>Vous Aimerez Aussi</h2>
+                <div class="grille-recommandations">
+                    <div class="carte-recommandation" style="--index: 0;">
+                        <img src="../images/dashiki-top.jpg" alt="Haut Dashiki">
+                        <h3>Haut Dashiki</h3>
+                        <p>Un haut coloré pour un style audacieux.</p>
+                        <a href="#menu-items" class="bouton-cta">Découvrir</a>
+                    </div>
+                    <div class="carte-recommandation" style="--index: 1;">
+                        <img src="../images/beaded-necklace.jpg" alt="Collier de Perles">
+                        <h3>Collier de Perles</h3>
+                        <p>Un bijou artisanal pour sublimer votre tenue.</p>
+                        <a href="#menu-items" class="bouton-cta">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Appel à l'Action -->
+        <section class="section-appel-à-action" style="--index: 0;">
+            <div class="contenu-appel-à-action conteneur">
+                <h2>Créez Votre Style Unique</h2>
+                <p>Commandez dès maintenant et ajoutez une touche africaine à votre garde-robe.</p>
+                <a href="../index.html" class="bouton-cta">Retour à l'Accueil</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="conteneur">
+            <p>Contact : <a href="mailto:contact@afrovibeshop.com">contact@afrovibeshop.com</a> | 01 23 45 67 89</p>
+            <p>Adresse : 123 Rue du Style, 75001 Paris</p>
+            <p>Suivez-nous :
+                <a href="#" class="lien-social">Facebook</a> |
+                <a href="#" class="lien-social">Instagram</a> |
+                <a href="#" class="lien-social">Twitter</a>
+            </p>
+            <p>© 2025 AfroVibe Shop. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
